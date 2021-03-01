@@ -1,7 +1,7 @@
 
 {
   "name": "react-native-goo-pay-button",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The native Google Pay button available for use on react-native",
   "main": "index.js",
   "scripts": {
