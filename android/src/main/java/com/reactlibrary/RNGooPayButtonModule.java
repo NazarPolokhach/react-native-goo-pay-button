@@ -7,24 +7,20 @@ import android.view.View;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
+import com.facebook.react.uimanager.SimpleViewManager;
+import com.facebook.react.uimanager.ThemedReactContext;
 
-public class RNGooPayButtonModule extends ReactContextBaseJavaModule {
-
-  private final ReactApplicationContext context;
-
-  public RNGooPayButtonModule(ReactApplicationContext reactContext) {
-    super(reactContext);
-    this.context = reactContext;
-    this.RNGooPayButtonModule(reactContext);
-  }
-
-  @SuppressLint("InflateParams")
-  public View RNGooPayButtonModule(ReactApplicationContext reactContext) {
-    return LayoutInflater.from(reactContext).inflate(R.layout.googlepay_button, null);
-  }
+public class RNGooPayButtonModule extends SimpleViewManager<View> {
+  public static final String REACT_CLASS = "RNGooPayButton";
 
   @Override
   public String getName() {
-    return "RNGooPayButton";
+    return REACT_CLASS;
+  }
+
+  @SuppressLint("InflateParams")
+  @Override
+  protected View createViewInstance(ThemedReactContext reactContext) {
+    return LayoutInflater.from(reactContext).inflate(R.layout.googlepay_button, null);
   }
 }
