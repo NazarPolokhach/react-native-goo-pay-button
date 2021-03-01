@@ -10,8 +10,12 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 
 public class RNGooPayButtonModule extends ReactContextBaseJavaModule {
 
-  public RNGooPayButtonModule(ReactApplicationContext reactContext, ReactApplicationContext reactContext1) {
+  private final ReactApplicationContext context;
+
+  public RNGooPayButtonModule(ReactApplicationContext reactContext) {
     super(reactContext);
+    this.context = reactContext;
+    this.RNGooPayButtonModule(reactContext);
   }
 
   @SuppressLint("InflateParams")
