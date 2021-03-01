@@ -1,0 +1,20 @@
+
+{
+  "name": "react-native-goo-pay-button",
+  "version": "1.0.0",
+  "description": "The native Google Pay button available for use on react-native",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native"
+  ],
+  "author": "Nazar Polokhach",
+  "license": "",
+  "peerDependencies": {
+    "react-native": "^0.41.2",
+    "react-native-windows": "0.41.0-rc.1"
+
+  }
+}
