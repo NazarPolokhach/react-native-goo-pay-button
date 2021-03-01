@@ -1,18 +1,22 @@
 
 package com.reactlibrary;
 
+import android.annotation.SuppressLint;
+import android.view.LayoutInflater;
+import android.view.View;
+
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
-import com.facebook.react.bridge.ReactMethod;
-import com.facebook.react.bridge.Callback;
 
 public class RNGooPayButtonModule extends ReactContextBaseJavaModule {
 
-  private final ReactApplicationContext reactContext;
-
-  public RNGooPayButtonModule(ReactApplicationContext reactContext) {
+  public RNGooPayButtonModule(ReactApplicationContext reactContext, ReactApplicationContext reactContext1) {
     super(reactContext);
-    this.reactContext = reactContext;
+  }
+
+  @SuppressLint("InflateParams")
+  public View RNGooPayButtonModule(ReactApplicationContext reactContext) {
+    return LayoutInflater.from(reactContext).inflate(R.layout.googlepay_button, null);
   }
 
   @Override
