@@ -30,7 +30,6 @@
 ```javascript
 import RNGooPayButton from 'react-native-goo-pay-button';
 
-// TODO: What to do with the module?
 render() {
   return <RNGooglePayButton />
 };
